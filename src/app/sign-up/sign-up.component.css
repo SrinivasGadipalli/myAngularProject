@@ -1,0 +1,89 @@
+.sign-container,
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.signUp-form,
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  gap: 30px;
+  padding: 40px 30px 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 0.5s;
+}
+
+.signUp-form:hover,
+.login-form:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.signUp-form input,
+.login-form input {
+  background-color: whitesmoke;
+  font-family: "Gill Sans", Gill Sans MT, "Calibri", "Trebuchet MS", sans-serif;
+  height: 20px;
+  padding: 10px;
+  font-size: 20px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 0;
+  outline: none;
+}
+
+.signUp-form input:hover,
+.login-form input:hover {
+  border-bottom: 2px solid blueviolet;
+}
+
+.signUp-form button,
+.login-form button {
+  height: 40px;
+  font-size: 1rem;
+}
+
+.signUp-form button:hover,
+.login-form button:hover {
+  color: blueviolet;
+  cursor: pointer;
+}
+
+.toggleSignLoginPage {
+  padding: 10px 0;
+  text-align: right;
+}
+
+.invalidMsg {
+  color: red;
+  margin-top: -20px;
+  text-align: right;
+}
+
+.toggleSignLoginPage:hover {
+  cursor: pointer;
+  color: blueviolet;
+}
+
+@media screen and (max-width: 476px) {
+  .signUp-form,
+  .login-form {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 477px) and (max-width: 768px) {
+  .signUp-form,
+  .login-form {
+    width: 60%;
+  }
+}

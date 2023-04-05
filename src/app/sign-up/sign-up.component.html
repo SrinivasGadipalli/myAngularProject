@@ -1,0 +1,61 @@
+<div *ngIf="!showloginSignUpPage" class="sign-container">
+  <h1>Sign Up</h1>
+  <form #signUpForm="ngForm" class="signUp-form">
+    <input type="text" placeholder="Enter Name" ngModel #name="ngModel" required name="name" />
+    <span class="invalidMsg" *ngIf="name.invalid && name.touched"
+      >Enter a Valid Name</span
+    >
+    <input type="email" placeholder="Enter Email" ngModel #email="ngModel" required name="email" />
+    <span class="invalidMsg" *ngIf="email.invalid && email.touched"
+      >Enter a Valid Email</span
+    >
+    <input
+      type="password"
+      placeholder="Enter Password"
+      ngModel
+      #password="ngModel" required
+      name="password"
+    />
+    <span class="invalidMsg" *ngIf="password.invalid && password.touched"
+      >Enter a Password</span
+    >
+    <button type="submit" (click)="signUpValue(signUpForm.value)">
+      Sign Up
+    </button>
+  </form>
+  <a class="toggleSignLoginPage" (click)="toggleSignLoginPage()"
+    >Already have an Account? <span>Click Here!</span> to Login</a
+  >
+</div>
+
+<div *ngIf="showloginSignUpPage" class="login-container">
+  <h1>Login</h1>
+  <form #loginForm="ngForm" class="login-form">
+    <input
+      type="email"
+      placeholder="Enter Email"
+      ngModel
+      #email="ngModel"
+      required
+      name="email"
+    />
+    <span class="invalidMsg" *ngIf="email.invalid && email.touched"
+      >Enter a Valid Email</span
+    >
+    <input
+      type="password"
+      placeholder="Enter Password"
+      ngModel
+      #password="ngModel"
+      required
+      name="password"
+    />
+    <span class="invalidMsg" *ngIf="password.invalid && password.touched"
+      >Enter Password</span
+    >
+    <button type="submit" (click)="loginValue(loginForm.value)">Login</button>
+  </form>
+  <a class="toggleSignLoginPage" (click)="toggleSignLoginPage()"
+    >Don't have an Account? <span>Click Here!</span> to Sign Up</a
+  >
+</div>
